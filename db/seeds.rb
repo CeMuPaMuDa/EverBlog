@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -13,4 +15,4 @@ hash_article = Array.new(10) do
   }
 end
 
-articles = Article.create! hash_article
+_articles = Article.create! hash_article

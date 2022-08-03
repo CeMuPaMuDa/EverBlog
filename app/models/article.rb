@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Article < ApplicationRecord
-  validates_presence_of :title, :body
+  validates :title, :body, presence: true
 end
