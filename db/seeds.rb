@@ -9,7 +9,7 @@
 hash_article = Array.new(10) do
   {
     title: FFaker::Book.title,
-    body: FFaker::Lorem.paragraphs,
+    body: FFaker::Book.description
   }
 end
 
