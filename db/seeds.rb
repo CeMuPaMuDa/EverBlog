@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+hash_article = Array.new(10) do
+  {
+    title: FFaker::Book.title,
+    body: FFaker::Lorem.paragraphs,
+  }
+end
+
+articles = Article.create! hash_article
