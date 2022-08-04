@@ -1,24 +1,14 @@
-# README
+# Rails API (mini Blog)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### This api project was tested with this react client:
+[React client (github)](https://github.com/VitaliyRdk/blog-app)
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##### Then start the rails API with the command:
+`rails server`
+##### To generate swagger documentation, use the command:
+`rake rswag:specs:swaggerize`
+or
+`rails rswag`
+##### Documentation for testing is available at the link
+[Swagger](http://127.0.0.1:3000/api-docs/) (rails client must be running)
