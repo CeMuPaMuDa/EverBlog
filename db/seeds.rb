@@ -15,4 +15,4 @@ hash_article = Array.new(10) do
   }
 end
 
-_articles = Article.create! hash_article
+Article.create! hash_article
