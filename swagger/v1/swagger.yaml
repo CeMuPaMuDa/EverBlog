@@ -18,7 +18,7 @@ paths:
           description: successful
       requestBody:
         content:
-          aplication/json:
+          application/json:
             schema:
               type: object
               properties:
@@ -27,8 +27,8 @@ paths:
                 body:
                   type: string
               required:
-              - title
-              - body
+              - name
+              - model
   "/articles/{id}":
     parameters:
     - name: id
@@ -44,14 +44,42 @@ paths:
           description: successful
     patch:
       summary: update article
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                body:
+                  type: string
+              required:
+              - name
+              - model
     put:
       summary: update article
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                body:
+                  type: string
+              required:
+              - name
+              - model
     delete:
       summary: delete article
       responses:

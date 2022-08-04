@@ -20,14 +20,14 @@ RSpec.describe 'articles', type: :request do
 
     post('create article') do
       response(200, 'successful') do
-        consumes 'aplication/json'
+        consumes 'application/json'
         parameter name: :article, in: :body, schema: {
           type: :object,
           properties: {
-            title: {type: :string},
-            body: {type: :string}
+            title: { type: :string },
+            body: { type: :string }
           },
-          required: %w[title body]
+          required: %w[name model]
         }
         after do |example|
           example.metadata[:response][:content] = {
@@ -48,7 +48,6 @@ RSpec.describe 'articles', type: :request do
     get('show article') do
       response(200, 'successful') do
         let(:id) { '123' }
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -63,7 +62,15 @@ RSpec.describe 'articles', type: :request do
     patch('update article') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :article, in: :body, schema: {
+          type: :object,
+          properties: {
+            title: { type: :string },
+            body: { type: :string }
+          },
+          required: %w[name model]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -78,7 +85,15 @@ RSpec.describe 'articles', type: :request do
     put('update article') do
       response(200, 'successful') do
         let(:id) { '123' }
-
+        consumes 'application/json'
+        parameter name: :article, in: :body, schema: {
+          type: :object,
+          properties: {
+            title: { type: :string },
+            body: { type: :string }
+          },
+          required: %w[name model]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
